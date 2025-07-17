@@ -132,3 +132,118 @@
     6- The child object's constructor is executed (default or user-defined)
 
     7- Control is returned to the caller.
+
+  - In child class constructors, we can control which base class constructor to be called.
+
+  - When the derived class doesn't specify a constructor for the parent class to be called, **the default base constructor is called**.
+
+  - Explicitly calling the base constructor is used to initialize the base class members.
+
+    ```c
+    class TeamLeader : public Employee
+    {
+    private:
+    	string teamName;
+    public:
+    	TeamLeader() : Employee("777", "Jana", 23)
+    	{
+    
+    	}
+    };
+    ```
+
+  - Access Specifiers:
+
+    - The protected section in the base class is accessible to the derived classes (in addition to the base class nad friend functions and classes)
+
+    - There are three types of inheritance:
+
+      1- Public Inheritance
+      The inherited public members stay public, and the inherited protected members stay protected.
+
+      2- Protected Inheritance:
+
+      The inherited protected and public members become protected.
+
+      3- Private Inheritance [Default]
+
+      The inherited public and protected members become private.
+
+    - The private members are never inherited.
+
+  - What happens if there are 2 methods/data members in the Base & Child classes with the same name?
+
+    ​	--> We can differentiate between them using the scope operator.
+
+    ```c
+    class Parent {
+    public:
+    	void print()
+    	{
+    		cout << "Parent is here!" << endl;
+    	}
+    };
+    
+    class Child : public Parent{
+    public:
+        void print()
+        {
+            cout << "Child is here" << endl;
+            Parent::print();
+        }
+    };
+    int main()
+    {
+        Child object;
+        object.print();
+        //Base Called!
+    }
+    ```
+
+- Overriding Behaviors:
+
+  - If a base class defines a function, it can be overridden by the child class. This means the child class can replace the implementation defined in the base class with a new implementation.
+
+    ```c
+    Base.print(); // Base here
+    Child.print(); // Child here
+    ```
+
+    
+
+  ```c
+  class MyStringImproved : public MyString
+  {
+  private:
+  	int* ptr;
+  public:
+  	MyStringImproved() : ptr(new int)
+  	{
+  	
+  	}
+  	MyStringImproved(const char* literals) : MyString(literals), ptr(new int) {}
+      // You must implement the copy constructor even if it's implemented in the base class!
+      // The base class only deep-copies its own data members, not that of the children! 
+      // SO, the copy constructor of the hcild should deep-copy its data members, too!
+  	MyStringImproved(const MyStringImproved& other) : ptr(new int)
+      {
+          memcpy(ptr, other.ptr, 4);
+          cout << "Copy Constructor of Child Class" << endl;
+      }
+  	~MyStringImproved()
+  	{
+  		if(ptr!=nullptr)
+  		{
+  			delete ptr
+  		}
+  	}
+  }
+  
+  int main()
+  {
+      MyStringImproved str1("hi");
+      MyStringImproved str2(str1); 
+  }
+  ```
+
+  

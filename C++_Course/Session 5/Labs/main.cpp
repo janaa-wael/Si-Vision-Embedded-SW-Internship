@@ -262,6 +262,10 @@ class TeamLeader : public Employee
 private:
 	string teamName;
 public:
+	TeamLeader() : Employee("777", "Jana", 23)
+	{
+
+	}
 	void func()
 	{
 		teamName = "embedded";
@@ -274,10 +278,12 @@ public:
 };
 
 class Base{
+	int num;
 public:
 	Base()
+	: num(0)
 	{
-		cout << "Base Constructor called." << endl;
+		cout << "Base Default Constructor called." << endl;
 	}
 	~Base()
 	{
@@ -297,7 +303,17 @@ public:
 	}
 };
 
+class Level1{
+public:
+	int var = 0x11;
+};
 
+class Level2: public Level1
+{
+public:
+	int var = 0x22;
+
+};
 int main()
 {
 	/*Task t1(1);
@@ -317,6 +333,8 @@ int main()
 //	name = name2 = name3;
 	Child childObject;
 	cout << "Hello" << endl;
+	Level2 obj;
+	obj.Level1::var = 0xAA;
 
 }
 
