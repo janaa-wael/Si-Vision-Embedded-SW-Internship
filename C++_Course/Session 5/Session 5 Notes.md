@@ -100,3 +100,35 @@
       - A class that inherits properties from another class.
 
     - A class can be a parent and a derived class at the same time.
+
+    - Suppose the following classes exist:
+
+      ![image-20250717203723826](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250717203723826.png)![image-20250717203758011](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250717203758011.png)
+
+      -> This implementation leads to "Compilation Error", because private members can't be accessed by child classes.
+
+      ![image-20250717203908878](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250717203908878.png)
+
+  - A child object inherits the member variables and functions from the base class.
+
+  - That doesn't mean that the child gets a copy of the members.
+
+  - A child object consists of two parts, a base object & a child object where each one is instantiated **solely**.
+
+  - Parent object is constructed first before the child object.
+
+  - What if the base and child classes have member vairables to be initialized?
+
+    1- Memory for derived is allocated to fit in the Base & Derived portions.
+
+    2- The appropriate derived constructor is called **<u>but not executed</u>**.
+
+    3- The initialization list initializes variables of the Base Object.
+
+    4- The base object's constructor is executed (default or user-defined)
+
+    5- The initialization list initializes variables of the **<u>Child object</u>**.
+
+    6- The child object's constructor is executed (default or user-defined)
+
+    7- Control is returned to the caller.
