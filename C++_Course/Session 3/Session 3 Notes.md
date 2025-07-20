@@ -1,20 +1,20 @@
 # Session 3 Notes
 
 - When calling any function, its parameters are pushed into the stack.
-- Prologue is the assembly section that is executed before the functions begins its execution.
+- Prologue is the assembly section that is executed before the function begins its execution.
 - ![image-20250715013648627](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250715013648627.png)
 
 - This is a pointer to the object, that is, it stores its address in memory. 
 
-- The address of object is passed as an argument to 
+- The address of object is passed as an argument to all its methods.
 
-- When calling member methods, arguments are pushed to the stack in addition to the address of the object in the memory (which we access using this pointer)
+- When calling member methods, arguments are pushed to the stack in addition to the address of the object in the memory (which we access using "this" pointer)
 
   ![image-20250715025017925](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250715025017925.png)
 
 ​	![image-20250715030132961](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250715030132961.png)
 
-- This operator helps each instance to keep track of its member variables and functions, by pointing to the first memory location of the instance.
+- "This" pointer helps each instance to keep track of its member variables and functions, by pointing to the first memory location of the instance.
 
 - "This" is a constant pointer where you can the values of the underlying object it points to, but you can't make it point to something else.
 
@@ -40,7 +40,7 @@
 
 Solution: 
 
-- size is 16 bytes, not 12 due to alignment where 4 bytes of padding is added next to the 4 bytes of variable firstEmpty
+- size is 16 bytes, not 12 due to alignment where 4 bytes of padding areadded next to the 4 bytes of variable firstEmpty
   e.g.: &firstempty --> 0xAABBCCDD11223344 --> 4 bytes of firstEmpty + 4 bytes of padding
 
 | 0xAABBCCDD11223344 | 4 bytes of firstEmpty | 4 bytes of padding               |
@@ -62,6 +62,8 @@ Solution:
     ![image-20250715120201663](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250715120201663.png)
 
     ![image-20250715120233316](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250715120233316.png)
+
+  - Static Members should be defined outside the class, so that the compiler can allocate memory space for it.
 
   - Non-static member variables are declared & defined when creating an object. However, static members aren't tied to a certain object or instance, they are tied to a class, so they should be defined outside (& declared inside the class), so that the compiler doesn't throw a compilation error when it sees the static member variable used in the code!
 
@@ -107,14 +109,19 @@ Solution:
 
   - So each object of `Dummy2` contains an `int`, which takes **4 bytes** (as stated in the question).
 
-- Static Methods: 
+  
+  
+- Static Methods:
+  
   - are functions of a class that can be called without the need of instantiating an object from the class.
   - To call them, we don't need to create an object, we can access the method through the class name and scope operator
   - It's forbidden to use non-static members in static methods! Static Member functions can only access static data members.
+  
 - Friend Functions:
   - A friend function is a function that can access the **private members** of a class as if it was a member of that class
   - To declare a friend function, simply use the friend keyword in front of the prototype of the function.
   - Friend function don't belong to the class, So, they don't have access to "this" pointer. That's why an object must be passed as a parameter.
+  
 - Friend Classes:
   - an entire object class can be friend to another class, where the friend class can access the private member of the other class. *(not recommended)*
   - We can make only a certain method in another class friend to the 1st class.

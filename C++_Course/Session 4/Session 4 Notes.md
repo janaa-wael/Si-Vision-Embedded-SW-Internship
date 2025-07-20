@@ -11,7 +11,7 @@
     | ![image-20250715145139808](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250715145139808.png) | ![image-20250715145114787](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250715145114787.png) |
 
   - Ideal method: **Forward Declaration**
-  - Don't occur in cpp files as they aren't included.
+  - Doesn't occur in cpp files as they aren't included.
 
 - ## Friends
 
@@ -146,3 +146,5 @@
 ![image-20250717134525508](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250717134525508.png)
 
 ​	- We use const MyString& other to avoid copying and to allow passing temporary objects l
+
+- We should make function parameters default from right to left.
