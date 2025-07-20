@@ -74,7 +74,7 @@ void destroyObject(Parent* object)
 }
 
 // Interface Class: A class that contains only pure virtual functions!
-class HWAccess{
+class ProtocolBase{
 /*private:
 	bool active;
 	HWAccess() : active(false)
@@ -91,7 +91,7 @@ public:
 	virtual void send() = 0;
 };
 
-class I2C : public HWAccess{
+class I2C : public ProtocolBase{
 public:
 	void init() override
 	{
@@ -101,28 +101,31 @@ public:
 	{
 
 	}
+	void specialFunc()
+	{
+		cout << "Special Function of I2C is called" << endl;
+	}
 };
 
-class SPI : public HWAccess{
+class SPI : public ProtocolBase{
 public:
+	SPI()
+	{
+
+	}
 	void init() override
 	{
 		cout << "SPI is initialized" << endl;
 	}
-	virtual void send() = 0;
-
-};
-
-class SPI_Child : public SPI
-{
-public:
-	void send() override
+	virtual void send() override
 	{
-		cout << "SPI successfully sent data!" << endl;
+		cout << "SPI successfully sent data" << endl;
 	}
+
 };
 
-class UART : public HWAccess
+
+class UART : public ProtocolBase
 {
 public:
 	void init() override
@@ -134,20 +137,64 @@ public:
 	}
 };
 
+enum ProtocolTypes{
+	SPI_t,
+	I2C_t
+};
+
+
+class HWAcess{
+private:
+	ProtocolBase* protocol;
+	ProtocolBase* createProtocol(const ProtocolTypes id)
+	{
+		if(id == SPI_t)
+		{
+			return new SPI();
+		}
+		else
+		{
+			return new I2C();
+		}
+	}
+public:
+	HWAcess(const ProtocolTypes id)
+	{
+		// Polymorphic Object
+		// ParentClass* parentObject = new ChildClass();
+		protocol = createProtocol(id);
+	}
+	void goThroughProcess(ProtocolBase* ptr)
+	{
+		ptr->init();
+		ptr->send();
+	}
+};
 // Rule: Parent Classes must force some rules on the children classes.
 // Extra: Functions that don't make any sense in the Parent class shouldn't be implemented
 // Rule: Constructing objects from Parent classes should be prohibited.
-void goThroughProcess(HWAccess* ptr)
-{
-	ptr->init();
-	ptr->send();
-}
+
 int main()
 {
-	SPI_Child sppi;
-	Child* c1 = new Child;
-	destroyObject(c1); // Implicit Upward Casting
-	I2C i2c;
+
+	//Child* c1 = new Child;
+	//destroyObject(c1); // Implicit Upward Casting
+	I2C* i2c = new I2C;
+
+	// Upward Casting
+	ProtocolBase* protocolBase = i2c;
+
+	// Downward Casting - Downcasting
+	I2C* object = static_cast<I2C*>(protocolBase); // Compile-time Checks
+
+	//SPI* spiObject = static_cast<SPI*>(protocolBase);
+	SPI* spiObject = dynamic_cast<SPI*>(protocolBase);
+
+	if(spiObject == nullptr)
+	{
+		cout << "Bad Casting" << endl;
+	}
+	i2c->specialFunc();
 }
 
 
