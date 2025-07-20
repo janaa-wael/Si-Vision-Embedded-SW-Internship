@@ -98,3 +98,80 @@
 
 > Solution: Child >> Base >> Base.
 > The type of the object/ref variable/pointer object determines which method will be called. 
+
+- **Polymorphism:**
+
+  - poly: means many
+
+  - morph: means shape
+
+  - It means many forms, hence, a polymorphic object is an object that exhibits many shapes & forms.
+
+  - Types of Polymorphism:
+
+    ​	1- Compile-Time Polymorphism
+
+    - Parametric Polymorphism [Function Templates]
+
+    - Ad-hoc Polymorphism [Function Overloading]
+
+      2- Run-Time Polymorphism (Virtual Function)
+
+- **Importance of Virtual Functions:**
+
+  - The `virtual` keyword is used in C++ to enable **polymorphism** — specifically **runtime (dynamic) dispatch** of function calls through base class pointers or references.
+
+  - Purpose: To allow **derived classes** to **override** methods of base classes and ensure the correct method is called at runtime, even when accessed via a base class pointer.
+
+  - Virtual function is a member function which is declared within a base class and is overridden by a derived class. When you refer to a derived class object using a pointer or a reference to the base class, you can call a virtual function for that object and execute the derived class's version of the function.
+
+  - They're mainly used to achieve Runtime Polymorphism
+
+  - A **virtual pointer** (commonly known as `vptr`) is a **hidden compiler-generated pointer** used to implement **runtime polymorphism** in C++.
+
+  - It works **behind the scenes** when you use **virtual functions** in a class.
+
+  - *How it works?*
+
+    When a class contains **at least one virtual function**, the compiler:
+
+    1. Creates a **virtual table** (called **vtable**) — a lookup table of function pointers for all virtual functions.
+    2. Adds a **hidden pointer** inside each object of that class, called the **vptr**.
+    3. At **object construction**, the `vptr` is set to point to the class’s vtable.
+    4. When a virtual function is called via a base pointer/reference, the function is looked up via the `vptr`.
+
+  - Virtual isn't written beside the child's function prototype, if there're no granadchildren who want to override it again.
+
+  - You can't access vptr directly, it's managed by the compiler.
+
+  - Every polymorphic object (with virtual functions) has one vptr.
+
+  - vptr gets updated if you change the actual type of the object during inheritance.
+
+    ![image-20250720154535036](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250720154535036.png)
+
+  - `reinterpret_cast` is a **type of cast** in C++ used to convert **any pointer type to any other pointer type**, or even between pointer and integer types.
+
+    ![image-20250720154706415](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250720154706415.png)
+
+  - Size of the class increases by declaring virtual functions
+
+  - Virtual Pointer is allocated in the heap (expensive operation)
+
+    ​	1- wastes memory
+
+    ​	2- affects the speed
+
+  - Virtual Table is stored in the text segment.
+
+- Question: Can a function be declared as static and virtual?
+
+  > No, because virtual functions need this pointer while static methods can't use them!
+
+- Virtual tables are also called "Dispatch Tables" or "Virtual Method Table" or "Vtable"
+
+- The virtual table and virtual pointers are constructed at the beginning of the object's constructor. Therefore, it's not advisable at all to call any virtual function inside the constructor as the vpointer and vtable could be not constructed yet.
+
+- Can a virtual function be called in the base constructor? No, it will always resolve to the base class version of the function, because the derived portion, vpointer and vtable of the class will already have been destroyed.
+
+  
