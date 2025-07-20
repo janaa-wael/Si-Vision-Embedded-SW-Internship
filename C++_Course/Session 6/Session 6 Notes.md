@@ -17,13 +17,13 @@
 
   ![image-20250720025805319](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250720025805319.png)
 
-- Multiple Inheritance enables a derived clas to inherit members from more than one parent!
+- Multiple Inheritance enables a derived clas to inherit members from more than one parent! *(Not Recommended)*
 
 - It's usually not preferred as it causes the "Diamond" problem, as shown in the figure:
 
   ![image-20250720033936497](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250720033936497.png)
 
-- It's usually advised to avoid multiple inheritance, unless we are working with abstract.
+- It's usually advised to avoid multiple inheritance, unless we are working with abstracts.
 
 - Example of Diamond Problem Design:
 
@@ -32,3 +32,5 @@
   > > Solution: We can determine which role we're accessing using scope operator
   > >
   > > ![image-20250720034952619](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250720034952619.png)
+
+- Different type of casting:
