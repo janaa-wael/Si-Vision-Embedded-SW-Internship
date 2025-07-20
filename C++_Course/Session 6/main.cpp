@@ -136,6 +136,7 @@ public:
 		{
 			if(arr[i]->getID() == TASK_1)
 			{
+				// Downcasting [Explicitly]
 				Class1* castedObject = static_cast<Class1*>(arr[i]);
 				castedObject->executeClass1Task();
 			}
@@ -151,15 +152,23 @@ int main()
 {
 	// Child >> Parent [Upward Casting]
 	// Parent >> Childd [Downward Casting]
-	/*	Child1 childObject;
+	Child1 childObject;
 
 	//Construction of parent class from child class (We only copy the base properties of ChildObject to ParentObject)
-	Parent parentObject(childObject);
+	//Parent parentObject(childObject);
 	int x = 10;
 	Parent& refObject = static_cast<Parent&>(childObject); //Explicit Upward Casting
 	//ref object points to the base
-	refObject.print();*/
+	refObject.print();
 
+	Class1* c1 = new Class1();
+	Class2* c2 = new Class2();
+	Container c(10);
+	c.addElement(c1);
+	c.addElement(c2);
+	c.executeFunction();
+	delete c1;
+	delete c2;
 }
 
 
