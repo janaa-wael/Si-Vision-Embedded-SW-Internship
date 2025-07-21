@@ -57,6 +57,8 @@ Solution:
 
   - It's not created in memory with the first object instantiated! 
 
+  - In static members declaration in classes: We can use `static` keyword, while in definition we don't use it, otherwise compilation error occurs.
+
   - They can be initialized only at its definition, not in the memory initializer list. If you attempt to do this, compilation error occurs because this member isn't stored in the memory space of the object in memory, it's stored elsewhere!
 
     ![image-20250715120201663](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250715120201663.png)
