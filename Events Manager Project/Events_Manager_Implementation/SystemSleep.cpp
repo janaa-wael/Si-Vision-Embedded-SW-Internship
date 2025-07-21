@@ -14,6 +14,10 @@ SystemSleep::SystemSleep() {
 
 }
 
+SystemSleep::SystemSleep(int priority) : SystemEvent(priority)
+{
+
+}
 void SystemSleep::executeEvent()
 {
 	setUpSystem();

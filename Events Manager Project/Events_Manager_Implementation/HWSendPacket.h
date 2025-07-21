@@ -12,6 +12,7 @@
 class HWSendPacket : public HardwareEvent{
 public:
 	HWSendPacket();
+	HWSendPacket(int priority);
 	void executeEvent() override;
 	virtual ~HWSendPacket();
 };

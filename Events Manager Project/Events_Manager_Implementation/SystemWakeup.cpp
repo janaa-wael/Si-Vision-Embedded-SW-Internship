@@ -14,6 +14,10 @@ SystemWakeup::SystemWakeup() {
 
 }
 
+SystemWakeup::SystemWakeup(int priority) : SystemEvent(priority)
+{
+
+}
 void SystemWakeup::executeEvent()
 {
 	setUpSystem();

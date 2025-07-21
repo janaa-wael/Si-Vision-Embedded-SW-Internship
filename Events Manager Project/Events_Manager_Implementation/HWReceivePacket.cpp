@@ -13,6 +13,11 @@ HWReceivePacket::HWReceivePacket() {
 	cout << "Hardware Receive Packet Constructor is called" << endl;
 }
 
+HWReceivePacket::HWReceivePacket(int priority) : HardwareEvent(priority)
+{
+
+}
+
 void HWReceivePacket::HWReceivePacket::executeEvent()
 {
 	cout << "Packet receive through Hardware successfully" << endl;

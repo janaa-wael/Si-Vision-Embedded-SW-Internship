@@ -12,6 +12,7 @@
 class HWReceivePacket : public HardwareEvent{
 public:
 	HWReceivePacket();
+	HWReceivePacket(int priority);
 	void executeEvent() override;
 	virtual ~HWReceivePacket();
 };

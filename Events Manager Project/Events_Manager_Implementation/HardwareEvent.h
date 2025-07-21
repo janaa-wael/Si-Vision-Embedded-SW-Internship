@@ -12,6 +12,7 @@
 class HardwareEvent : public Event{
 public:
 	HardwareEvent();
+	HardwareEvent(int priority);
 	virtual void executeEvent() = 0;
 	void setUpHardware();
 	virtual ~HardwareEvent();

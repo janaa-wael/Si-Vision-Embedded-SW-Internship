@@ -9,9 +9,11 @@
 #define SYSTEMSHUTDOWN_H_
 #include "SystemEvent.h"
 
-class SystemShutdown {
+class SystemShutdown : public SystemEvent {
 public:
 	SystemShutdown();
+	SystemShutdown(int priority);
+	void executeEvent() override;
 	virtual ~SystemShutdown();
 };
 

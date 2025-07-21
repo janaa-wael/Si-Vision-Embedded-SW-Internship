@@ -12,6 +12,7 @@
 class SystemEvent : public Event{
 public:
 	SystemEvent();
+	SystemEvent(int priority);
 	virtual void executeEvent() = 0;
 	void setUpSystem();
 	virtual ~SystemEvent();

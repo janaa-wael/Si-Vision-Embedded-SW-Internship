@@ -12,6 +12,7 @@
 class SystemWakeup : public SystemEvent{
 public:
 	SystemWakeup();
+	SystemWakeup(int priority);
 	void executeEvent() override;
 	virtual ~SystemWakeup();
 };

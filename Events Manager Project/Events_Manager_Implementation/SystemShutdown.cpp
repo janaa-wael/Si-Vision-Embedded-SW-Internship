@@ -14,6 +14,10 @@ SystemShutdown::SystemShutdown()
 	cout << "System Shutdown Constructor is called" << endl;
 }
 
+SystemShutdown::SystemShutdown(int priority) : SystemEvent(priority)
+{
+
+}
 void SystemEvent::executeEvent()
 {
 	setUpSystem();

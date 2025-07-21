@@ -15,6 +15,11 @@ HWSendPacket::HWSendPacket() {
 	cout << "Hardware Send Packet Default Constructor is being called." << endl;
 }
 
+HWSendPacket::HWSendPacket(int priority) : HardwareEvent(priority)
+{
+
+}
+
 void HWSendPacket::executeEvent()
 {
 	HardwareEvent::setUpHardware();

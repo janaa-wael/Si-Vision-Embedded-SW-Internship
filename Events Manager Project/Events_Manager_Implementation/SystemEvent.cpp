@@ -12,6 +12,10 @@ SystemEvent::SystemEvent() {
 	cout << "System Event Constructor is called" << endl;
 }
 
+SystemEvent::SystemEvent(int priority) : Event(priority)
+{
+
+}
 void SystemEvent::setUpSystem()
 {
 	cout << "Set Up System function is being executed" << endl;

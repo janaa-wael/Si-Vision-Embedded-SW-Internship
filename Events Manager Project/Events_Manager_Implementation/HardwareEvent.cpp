@@ -13,6 +13,11 @@ HardwareEvent::HardwareEvent() {
 
 }
 
+HardwareEvent::HardwareEvent(int priority) : Event(priority)
+{
+
+}
+
 void HardwareEvent::setUpHardware()
 {
 	cout << "Set Up Hardware Function is being executed." << endl;

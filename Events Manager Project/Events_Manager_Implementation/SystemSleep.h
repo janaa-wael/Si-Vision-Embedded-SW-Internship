@@ -11,6 +11,7 @@
 class SystemSleep : public SystemEvent{
 public:
 	SystemSleep();
+	SystemSleep(int priority);
 	void executeEvent() override;
 	virtual ~SystemSleep();
 };
