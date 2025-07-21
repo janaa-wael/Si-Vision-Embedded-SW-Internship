@@ -7,7 +7,7 @@
 
 #include "EventManager.h"
 #include <iostream>
-#include "SystemEvent.h"
+#include "HWSendPacket.h"
 #include <thread>
 #include <chrono>
 using namespace std;
@@ -59,8 +59,9 @@ void EventManager::getMaxPriorityEvent(Event* e)
 
 void EventManager::startHandlingEvents()
 {
-	Event* em = new SystemEvent();
-	thread t1(&EventManager::getMaxPriorityEvent);
+	Event* e = new HWSendPacket();
+	EventManager* em = getInstance();
+	thread t1(&EventManager::getMaxPriorityEvent, em, e);
 }
 
 void EventManager::stopHandlingEvents()

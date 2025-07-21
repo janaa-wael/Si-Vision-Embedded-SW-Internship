@@ -18,7 +18,7 @@ SystemShutdown::SystemShutdown(int priority) : SystemEvent(priority)
 {
 
 }
-void SystemEvent::executeEvent()
+void SystemShutdown::executeEvent()
 {
 	setUpSystem();
 	cout << "System successfully transition to the Shutdown mode" << endl;
