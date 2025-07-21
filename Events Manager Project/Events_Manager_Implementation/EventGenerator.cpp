@@ -7,6 +7,7 @@
 
 #include "EventGenerator.h"
 #include <iostream>
+#include <thread>
 using namespace std;
 
 EventGenerator::EventGenerator() {
@@ -18,6 +19,16 @@ Event* EventGenerator::generateRandomEvent()
 {
 	int rnd = rand()%5;
 	return mp[rnd];
+}
+
+void start()
+{
+	EventGenerator* eg;
+	thread t1();
+}
+void stop()
+{
+
 }
 
 EventGenerator::~EventGenerator() {

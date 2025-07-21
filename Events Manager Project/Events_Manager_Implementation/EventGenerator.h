@@ -29,6 +29,8 @@ private:
 public:
 	EventGenerator();
 	Event* generateRandomEvent();
+	void start();
+	void stop();
 	virtual ~EventGenerator();
 };
 
