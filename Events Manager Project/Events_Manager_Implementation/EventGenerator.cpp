@@ -6,13 +6,21 @@
  */
 
 #include "EventGenerator.h"
+#include <iostream>
+using namespace std;
 
 EventGenerator::EventGenerator() {
-	// TODO Auto-generated constructor stub
+	cout << "Event Generator Constructor is called" << endl;
 
 }
 
+Event* EventGenerator::generateRandomEvent()
+{
+	int rnd = rand()%5;
+	return mp[rnd];
+}
+
 EventGenerator::~EventGenerator() {
-	// TODO Auto-generated destructor stub
+	cout << "Event Generator Destructor is called" << endl;
 }
 
