@@ -17,12 +17,39 @@
 
   - They are functions that serve as a pattern for creating other similar functions. It is a feature to create a function without having to specify the exact type(s) of some or all of the variables. Instead, we define the function using placeholder types, called **template type parameters**.
 
+    e.g.: Instead of creating:
+
+    ```c
+    int add (int a, int b);
+    float add(float a, float b);
+    char add(char a, char b);
+    ```
+  
+    We create template function as follows:
+  
+    ```c
+    template <typename T>
+    T add(T a, T b);
+    ```
+  
+  - If we need to decouple the return type from the arguments' types & we call the function without specifying the return type at compile-time, compilation error occurs. We should **explicitly** specify the return type at compilation time because the compiler won't be able to deduce it, since R is declared as a separate template parameters with no linkage to T1 or T2.
+  
+    ```c
+    template <typename T1, typename T2, typename R>
+    R add(T1 a, T2 b)
+    {
+        return a+b;
+    }
+    ```
+  
+    
+  
   - Template functions are usually the way to go when the function's implementation doesn't differ from one type to another.
-
+  
   - Normally, the template functions can deduce the type automatically.
-
+  
   - Will this code compile?
-
+  
     ```c
     template <typename T>
     void func(T x)
@@ -60,11 +87,11 @@
           func(10);
       }
       ```
-
+  
       > Solution: Compilation error occurs, because there are 2 possible matches for this function so the compiler can't know what template to use in which function. 
-
+  
   - We can specify multiple template types. The compiler will implicitly deduce the types based on the passed arguments on calling. You can specify the types explicitly as follows:
-
+  
     ![image-20250721044525976](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250721044525976.png)
-
+  
   - Templates are **not actual code** until they're instantiated with a specific type. If the **template definitions** are in a `.cpp` file, the compiler **doesn't generate code** for the specific type unless the full definition is visible at compile time.
