@@ -24,6 +24,6 @@ void SystemShutdown::executeEvent()
 	cout << "System successfully transition to the Shutdown mode" << endl;
 }
 SystemShutdown::~SystemShutdown() {
-	cout << "System Shutdonw Desructor is called" << endl;
+	cout << "System Shutdown Destructor is called" << endl;
 }
 
