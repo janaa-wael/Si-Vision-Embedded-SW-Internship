@@ -12,7 +12,7 @@ class Event {
 	int priority;
 public:
 	Event();
-	virtual void executeFunc() = 0;
+	virtual void executeEvent() = 0;
 	virtual ~Event();
 };
 
