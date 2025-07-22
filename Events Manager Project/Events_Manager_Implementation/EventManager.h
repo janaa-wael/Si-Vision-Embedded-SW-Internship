@@ -10,6 +10,8 @@
 #include <iostream>
 #include <queue>
 #include <vector>
+#include <thread>
+#include <mutex>
 #include "Event.h"
 using namespace std;
 
@@ -22,10 +24,14 @@ private:
 			return e1->getPriority() > e2->getPriority();
 		}
 	};
+	bool running = false;
+	mutex mtx;
 	EventManager();
 	priority_queue <Event*, vector<Event*>, comparator> pq;
 	static EventManager* instance;
 	static bool isCreated;
+	thread scheduling_thread;
+	thread stopScheduling_thread;
 public:
 	static EventManager* getInstance();
 	void postEvent(Event* e);

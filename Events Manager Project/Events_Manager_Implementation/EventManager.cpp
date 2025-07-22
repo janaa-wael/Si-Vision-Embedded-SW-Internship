@@ -9,6 +9,7 @@
 #include <iostream>
 #include "HWSendPacket.h"
 #include <thread>
+#include <mutex>
 #include <chrono>
 using namespace std;
 
@@ -19,10 +20,12 @@ EventManager* EventManager::instance = nullptr;
 
 EventManager::EventManager()
 {
-	cout << "Event Manager Private Default Constructor is called" << endl;
-
+	cout << "Event Manager Private Default Constructor is called" << endl;;
+	scheduling_thread = thread(&EventManager::startHandlingEvents, this);
+	stopScheduling_thread = thread(&EventManager::stopHandlingEvents, this);
 }
 
+/* Applying Singleton Pattern */
 EventManager* EventManager::getInstance()
 {
 	if(!isCreated)
@@ -36,41 +39,47 @@ void EventManager::postEvent(Event* e)
 {
 	if(e != nullptr)
 	{
-		e->executeEvent();
+		pq.push(e);
 	}
 }
 
 void EventManager::getMaxPriorityEvent(Event* e)
 {
-	while(1)
+	if(!pq.empty())
 	{
-		if(!pq.empty())
-		{
-			e = pq.top();
-			e->executeEvent();
-			pq.pop();
-		}
-		else
-			e = nullptr;
-		std::this_thread::sleep_for(std::chrono::seconds(2)); // Pause for 1 sec
-
+		e = pq.top();
+		e->executeEvent();
+		pq.pop();
 	}
+	else
+		e = nullptr;
 }
 
 void EventManager::startHandlingEvents()
 {
-	Event* e = new HWSendPacket();
-	EventManager* em = getInstance();
-	thread t1(&EventManager::getMaxPriorityEvent, em, e);
+
+	running = true;
+	while(running)
+	{
+		if(!pq.empty())
+		{
+			Event* e = pq.top();
+			pq.pop();
+			e->executeEvent();
+		}
+		std::this_thread::sleep_for(std::chrono::seconds(2)); // Pause for 1 sec
+	}
 }
 
 void EventManager::stopHandlingEvents()
 {
-
+	this_thread::sleep_for(chrono::seconds(10));
+	running = false;
+	if(scheduling_thread.joinable()) scheduling_thread.join();
 }
 
 EventManager::~EventManager() {
 	cout << "Event Manager Destructor is called" << endl;
-	delete instance;
+	if(stopScheduling_thread.joinable()) stopScheduling_thread.join();
 }
 

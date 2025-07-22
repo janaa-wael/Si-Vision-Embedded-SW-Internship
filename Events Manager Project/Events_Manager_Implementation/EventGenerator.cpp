@@ -16,7 +16,7 @@ EventGenerator::EventGenerator() : em(EventManager::getInstance())
 	cout << "Event Generator Constructor is called" << endl;
 }
 
-EventGenerator::EventGenerator(int frequency) : frequency(frequency)
+EventGenerator::EventGenerator(int frequency) : frequency(frequency), em(EventManager::getInstance())
 {
 	cout << "Event Generator Parameterized Constructor is called with frequency = 1 second" << endl;
 }
@@ -34,6 +34,7 @@ void EventGenerator::start()
 	running = true;
 	run_thread = thread(&EventGenerator::run, this);
 	stop_thread = thread(&EventGenerator::stop, this);
+	//em->startHandlingEvents();
 }
 
 void EventGenerator::stop()
