@@ -19,19 +19,23 @@
 #include <atomic>
 using namespace std;
 
+#define MAX_PRIORITY		100
+#define RADNOM_PRI			rand()%5
 class EventGenerator {
 private:
-	atomic<bool> running;
-	thread t;
+	atomic<bool> running = false;
+	thread run_thread;
+	thread stop_thread;
 	int frequency;
 	map <int, Event*> mp = {
-			{0, new HWSendPacket()},
-			{1, new HWReceivePacket()},
-			{2, new SystemWakeup()},
-			{3, new SystemSleep()},
-			{4, new SystemShutdown()}
+			{0, new HWSendPacket(RADNOM_PRI)},
+			{1, new HWReceivePacket(RADNOM_PRI)},
+			{2, new SystemWakeup(RADNOM_PRI)},
+			{3, new SystemSleep(RADNOM_PRI)},
+			{4, new SystemShutdown(RADNOM_PRI)}
 	};
 	EventManager* em;
+	Event* Current_Event;
 public:
 	EventGenerator();
 	EventGenerator(int frequency);
@@ -39,6 +43,7 @@ public:
 	void start();
 	void stop();
 	void run();
+	void waitForStop();
 	virtual ~EventGenerator();
 };
 

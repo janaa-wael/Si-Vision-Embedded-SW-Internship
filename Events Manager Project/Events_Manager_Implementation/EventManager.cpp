@@ -71,5 +71,6 @@ void EventManager::stopHandlingEvents()
 
 EventManager::~EventManager() {
 	cout << "Event Manager Destructor is called" << endl;
+	delete instance;
 }
 

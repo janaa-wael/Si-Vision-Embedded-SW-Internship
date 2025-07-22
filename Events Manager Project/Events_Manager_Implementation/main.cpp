@@ -13,9 +13,8 @@ using namespace std;
 /********Testing Event Generator ********/
 int main()
 {
-	EventGenerator* eg = new EventGenerator(1);
-	eg->run();
-	this_thread::sleep_for(std::chrono::seconds(5));
-	eg->stop();
+	EventGenerator eg(1);
+	eg.start();
+	eg.waitForStop();
 }
 
