@@ -1,7 +1,1 @@
-#include <stdlib.h>
-#include <stdio.h>
-int main()
-{
-	printf("Hello, Jana!");
-	return 0;
-}
+int main() { return 0;}

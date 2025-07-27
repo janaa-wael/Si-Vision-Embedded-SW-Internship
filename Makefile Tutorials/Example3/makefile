@@ -1,0 +1,2 @@
+another:
+	echo "Hello, Jana"
