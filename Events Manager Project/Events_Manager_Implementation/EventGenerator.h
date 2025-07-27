@@ -35,7 +35,6 @@ private:
 			{4, new SystemShutdown(RADNOM_PRI)}
 	};*/
 	EventManager* em;
-	Event* Current_Event;
 public:
 	EventGenerator();
 	EventGenerator(int frequency,int run_time);

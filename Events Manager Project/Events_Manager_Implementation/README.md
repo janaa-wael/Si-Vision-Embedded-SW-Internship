@@ -1,6 +1,6 @@
 # 🧠 Event Manager System
 
-This project is a multi-threaded, priority-based **Event Manager System** implemented in modern C++. It simulates the generation, scheduling, and execution of system and hardware events, applying the **Singleton Pattern**, **Object-Oriented Design**, and **multithreading** with standard C++11+ libraries.
+This project is a multi-threaded, priority-based **Event Manager System** implemented in modern C++. It simulates the generation, scheduling, and execution of system and hardware events, applying the **Singleton Pattern**, **Factory Pattern**, **Object-Oriented Design**, and **multithreading** with standard C++11+ libraries.
 
 ---
 

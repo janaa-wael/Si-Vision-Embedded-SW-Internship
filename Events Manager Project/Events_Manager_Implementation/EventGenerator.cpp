@@ -11,15 +11,15 @@
 #include <future>
 using namespace std;
 
-EventGenerator::EventGenerator() : em(EventManager::getInstance()), total_running_time(20)
+EventGenerator::EventGenerator() : frequency(1), total_running_time(20),  em(EventManager::getInstance())
 {
 	cout << "Event Generator Constructor is called" << endl;
 }
 
 EventGenerator::EventGenerator(int frequency, int run_time) :
 		frequency(frequency),
-		em(EventManager::getInstance()),
-		total_running_time(run_time)
+		total_running_time(run_time),
+		em(EventManager::getInstance())
 {
 	em->setSleeptime(1);
 	cout << "Event Generator Parameterized Constructor is called with frequency = 1 second" << endl;
