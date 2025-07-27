@@ -17,12 +17,16 @@ using namespace std;
 bool EventManager::isCreated = false;
 EventManager* EventManager::instance = nullptr;
 
-
-EventManager::EventManager()
+EventManager::EventManager() : sleeptime(2)
 {
 	cout << "Event Manager Private Default Constructor is called" << endl;;
 	scheduling_thread = thread(&EventManager::startHandlingEvents, this);
 	stopScheduling_thread = thread(&EventManager::stopHandlingEvents, this);
+}
+
+EventManager::EventManager(int sleeptime) : sleeptime(sleeptime)
+{
+
 }
 
 /* Applying Singleton Pattern */
@@ -35,6 +39,10 @@ EventManager* EventManager::getInstance()
 	return instance;
 }
 
+void EventManager::setSleeptime(int sleeptime)
+{
+	this->sleeptime = sleeptime;
+}
 void EventManager::postEvent(Event* e)
 {
 	if(e != nullptr)
@@ -57,7 +65,7 @@ void EventManager::getMaxPriorityEvent(Event* e)
 
 void EventManager::startHandlingEvents()
 {
-
+	cout << "Thread Start Handling Events started running" << endl;
 	running = true;
 	while(running)
 	{
@@ -67,12 +75,13 @@ void EventManager::startHandlingEvents()
 			pq.pop();
 			e->executeEvent();
 		}
-		std::this_thread::sleep_for(std::chrono::seconds(2)); // Pause for 1 sec
+		std::this_thread::sleep_for(std::chrono::seconds(sleeptime)); // Pause for 1 sec
 	}
 }
 
 void EventManager::stopHandlingEvents()
 {
+	cout << "Thread Stop Handling Events started running" << endl;
 	this_thread::sleep_for(chrono::seconds(10));
 	running = false;
 	if(scheduling_thread.joinable()) scheduling_thread.join();

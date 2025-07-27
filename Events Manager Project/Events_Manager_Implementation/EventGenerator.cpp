@@ -11,13 +11,17 @@
 #include <future>
 using namespace std;
 
-EventGenerator::EventGenerator() : em(EventManager::getInstance())
+EventGenerator::EventGenerator() : em(EventManager::getInstance()), total_running_time(10)
 {
 	cout << "Event Generator Constructor is called" << endl;
 }
 
-EventGenerator::EventGenerator(int frequency) : frequency(frequency), em(EventManager::getInstance())
+EventGenerator::EventGenerator(int frequency, int run_time) :
+		frequency(frequency),
+		em(EventManager::getInstance()),
+		total_running_time(run_time)
 {
+	em->setSleeptime(1);
 	cout << "Event Generator Parameterized Constructor is called with frequency = 1 second" << endl;
 }
 
@@ -39,8 +43,8 @@ void EventGenerator::start()
 
 void EventGenerator::stop()
 {
-	cout << "Stop method is called" << endl;
-    this_thread::sleep_for(std::chrono::seconds(10));
+	cout << "Thread Stop started running" << endl;
+    this_thread::sleep_for(std::chrono::seconds(total_running_time));
 	if(!running) return;
 	running = false;
 	if(run_thread.joinable()) run_thread.join();
@@ -49,6 +53,7 @@ void EventGenerator::stop()
 
 void EventGenerator::run()
 {
+	cout << "Thread run started running" << endl;
 	while(running)
 	{
 		Event* e = generateRandomEvent();

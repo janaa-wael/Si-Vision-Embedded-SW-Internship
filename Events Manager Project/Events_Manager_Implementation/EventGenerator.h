@@ -27,6 +27,7 @@ private:
 	thread run_thread;
 	thread stop_thread;
 	int frequency;
+	int total_running_time;
 	map <int, Event*> mp = {
 			{0, new HWSendPacket(RADNOM_PRI)},
 			{1, new HWReceivePacket(RADNOM_PRI)},
@@ -38,7 +39,7 @@ private:
 	Event* Current_Event;
 public:
 	EventGenerator();
-	EventGenerator(int frequency);
+	EventGenerator(int frequency,int run_time);
 	Event* generateRandomEvent();
 	void start();
 	void stop();

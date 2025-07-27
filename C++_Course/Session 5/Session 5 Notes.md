@@ -53,7 +53,7 @@
 
 - Question: What function is called?
 
-  ```
+  ```c
   int main()
   {
   	MyString name4 = "hi";
@@ -224,7 +224,7 @@
   	MyStringImproved(const char* literals) : MyString(literals), ptr(new int) {}
       // You must implement the copy constructor even if it's implemented in the base class!
       // The base class only deep-copies its own data members, not that of the children! 
-      // SO, the copy constructor of the hcild should deep-copy its data members, too!
+      // SO, the copy constructor of the child should deep-copy its data members, too!
   	MyStringImproved(const MyStringImproved& other) : ptr(new int)
       {
           memcpy(ptr, other.ptr, 4);
@@ -246,4 +246,4 @@
   }
   ```
 
-  
+  - It's a good practice to implement in the base class the same constructors in the child class and reverse versa.

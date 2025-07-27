@@ -18,6 +18,7 @@ using namespace std;
 
 class EventManager {
 private:
+	int sleeptime;
 	struct comparator{
 		bool operator()(Event* e1, Event* e2)
 		{
@@ -27,6 +28,7 @@ private:
 	bool running = false;
 	mutex mtx;
 	EventManager();
+	EventManager(int sleeptime);
 	priority_queue <Event*, vector<Event*>, comparator> pq;
 	static EventManager* instance;
 	static bool isCreated;
@@ -34,6 +36,7 @@ private:
 	thread stopScheduling_thread;
 public:
 	static EventManager* getInstance();
+	void setSleeptime(int sleeptime);
 	void postEvent(Event* e);
 	void startHandlingEvents();
 	void stopHandlingEvents();

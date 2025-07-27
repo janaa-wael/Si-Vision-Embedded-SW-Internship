@@ -51,7 +51,7 @@
 
 - Casting from child to parent >> Upward casting (not necessary)
 
-  - We can only access the base data members and methods
+  - We can only access the base data members and methods from the child object directly.
 
 - Casting from parent to child >> Downward casting
 
@@ -140,7 +140,7 @@
     3. At **object construction**, the `vptr` is set to point to the class’s vtable.
     4. When a virtual function is called via a base pointer/reference, the function is looked up via the `vptr`.
 
-  - Virtual isn't written beside the child's function prototype, if there're no granadchildren who want to override it again.
+  - Virtual isn't written beside the child's function prototype, if there're no grandchildren who want to override it again.
 
   - You can't access vptr directly, it's managed by the compiler.
 
@@ -166,12 +166,12 @@
 
 - Question: Can a function be declared as static and virtual?
 
-  > No, because virtual functions need this pointer while static methods can't use them!
+  > No, because virtual functions need "this" pointer while static methods can't use them!
 
 - Virtual tables are also called "Dispatch Tables" or "Virtual Method Table" or "Vtable"
 
 - The virtual table and virtual pointers are constructed at the beginning of the object's constructor. Therefore, it's not advisable at all to call any virtual function inside the constructor as the vpointer and vtable could be not constructed yet.
 
-- Can a virtual function be called in the base constructor? No, it will always resolve to the base class version of the function, because the derived portion, vpointer and vtable of the class will already have been destroyed.
+- Can a virtual function be called in the base destructor? No, it will always resolve to the base class version of the function, because the derived portion, vpointer and vtable of the class will already have been destroyed.
 
   
