@@ -11,7 +11,7 @@
 #include <future>
 using namespace std;
 
-EventGenerator::EventGenerator() : em(EventManager::getInstance()), total_running_time(10)
+EventGenerator::EventGenerator() : em(EventManager::getInstance()), total_running_time(20)
 {
 	cout << "Event Generator Constructor is called" << endl;
 }

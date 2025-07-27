@@ -17,6 +17,7 @@ int main()
 	EventGenerator eg(1,10);
 	//EventManager* em = EventManager::getInstance();
 	eg.start();
+
 	eg.waitForStop();
 
 }
