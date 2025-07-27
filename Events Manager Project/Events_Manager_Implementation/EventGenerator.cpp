@@ -28,7 +28,7 @@ EventGenerator::EventGenerator(int frequency, int run_time) :
 Event* EventGenerator::generateRandomEvent()
 {
 	int rnd = rand()%5;
-	return mp[rnd];
+	return EventFactory::createEvent(rnd);
 }
 
 void EventGenerator::start()

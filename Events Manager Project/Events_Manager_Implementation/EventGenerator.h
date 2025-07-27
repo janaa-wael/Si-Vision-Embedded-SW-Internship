@@ -13,14 +13,13 @@
 #include "SystemWakeup.h"
 #include "SystemSleep.h"
 #include "SystemShutdown.h"
+#include "EventFactory.h"
 #include <map>
 #include <iostream>
 #include <thread>
 #include <atomic>
 using namespace std;
 
-#define MAX_PRIORITY		100
-#define RADNOM_PRI			rand()%5
 class EventGenerator {
 private:
 	atomic<bool> running = false;
@@ -28,13 +27,13 @@ private:
 	thread stop_thread;
 	int frequency;
 	int total_running_time;
-	map <int, Event*> mp = {
+/*	map <int, Event*> mp = {
 			{0, new HWSendPacket(RADNOM_PRI)},
 			{1, new HWReceivePacket(RADNOM_PRI)},
 			{2, new SystemWakeup(RADNOM_PRI)},
 			{3, new SystemSleep(RADNOM_PRI)},
 			{4, new SystemShutdown(RADNOM_PRI)}
-	};
+	};*/
 	EventManager* em;
 	Event* Current_Event;
 public:
