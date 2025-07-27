@@ -218,4 +218,3 @@ three: $(thing_right)
     - The **stem** is the part before `.o`, like `foo`, `bar`, `all`
     - `%.c`: turns into `foo.c`, `bar.c`, `all.c`
 
-- 
