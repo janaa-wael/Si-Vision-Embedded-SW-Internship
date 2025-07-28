@@ -46,3 +46,10 @@ public:
 };
 
 #endif /* EVENTMANAGER_H_ */
+
+//README File, Makefile, Enable debugging by option tool, rule for debugging
+//verbose option, optimization levels(O0, O1, O2), size: (Os, Os1), Og
+//are debugging symbols host-dependent?
+//
+//list of gnu utitlities: each utility: brief description + usage example
+//
