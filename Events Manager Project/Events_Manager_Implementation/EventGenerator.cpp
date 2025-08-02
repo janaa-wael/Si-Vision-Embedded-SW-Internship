@@ -60,7 +60,6 @@ void EventGenerator::run()
 		em->postEvent(e);
 		cout << "Event posted to Event Manager successfully" << endl;
         this_thread::sleep_for(std::chrono::seconds(1));
-        //delete e;
 	}
 }
 
@@ -72,6 +71,5 @@ void EventGenerator::waitForStop()
 EventGenerator::~EventGenerator()
 {
 	cout << "Event Generator Destructor is called" << endl;
-	//delete em;
 }
 
