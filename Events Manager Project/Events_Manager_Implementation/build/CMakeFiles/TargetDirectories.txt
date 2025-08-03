@@ -1,0 +1,3 @@
+D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/final_program.dir
+D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/ALL_BUILD.dir
+D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/ZERO_CHECK.dir

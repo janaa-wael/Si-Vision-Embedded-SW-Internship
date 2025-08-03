@@ -1,0 +1,1140 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineSystem.cmake:212 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Windows - 10.0.22631 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WinAVR-20100110\\bin"
+        - "C:\\WinAVR-20100110\\utils\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Polyspace\\R2021a\\runtime\\win64"
+        - "C:\\Program Files\\Polyspace\\R2021a\\bin"
+        - "C:\\Program Files\\Polyspace\\R2021a\\polyspace\\bin"
+        - "C:\\Program Files\\toolchain\\64-bit operating system\\mingw64\\bin"
+        - "C:\\Users\\hp\\Downloads\\winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2\\mingw64\\bin"
+        - "C:\\ARM_TOOLCHAIN\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility"
+        - "C:\\Program Files\\OpenSSL-Win64\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\Program Files\\PuTTY\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\learn-in-depth\\learn-in-depth_AutosarConfigurator_setup"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 8/3/2025 9:09:20 AM.
+      Project "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdC.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdC.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TC /FC /errorReport:queue CMakeCCompilerId.c
+        CMakeCCompilerId.c
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdC.lib" /MACHINE:X64 Debug\\CMakeCCompilerId.obj
+        CompilerIdC.vcxproj -> D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_C_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdC.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdC.tlog\\CompilerIdC.lastbuildstate".
+      Done Building Project "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdC\\CompilerIdC.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:02.65
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+      
+      The C compiler identification is MSVC, found in:
+        D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/4.1.0-rc4/CompilerIdC/CompilerIdC.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:103 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/WinAVR-20100110/bin/"
+      - "C:/WinAVR-20100110/utils/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/"
+      - "C:/Program Files/Polyspace/R2021a/bin/"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/"
+      - "C:/ARM_TOOLCHAIN/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/"
+      - "C:/Program Files/OpenSSL-Win64/bin/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/Program Files/PuTTY/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WinAVR-20100110\\bin"
+        - "C:\\WinAVR-20100110\\utils\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Polyspace\\R2021a\\runtime\\win64"
+        - "C:\\Program Files\\Polyspace\\R2021a\\bin"
+        - "C:\\Program Files\\Polyspace\\R2021a\\polyspace\\bin"
+        - "C:\\Program Files\\toolchain\\64-bit operating system\\mingw64\\bin"
+        - "C:\\Users\\hp\\Downloads\\winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2\\mingw64\\bin"
+        - "C:\\ARM_TOOLCHAIN\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility"
+        - "C:\\Program Files\\OpenSSL-Win64\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\Program Files\\PuTTY\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\learn-in-depth\\learn-in-depth_AutosarConfigurator_setup"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "_CMAKE_TOOL_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lld-link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/WinAVR-20100110/bin/"
+      - "C:/WinAVR-20100110/utils/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/"
+      - "C:/Program Files/Polyspace/R2021a/bin/"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/"
+      - "C:/ARM_TOOLCHAIN/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/"
+      - "C:/Program Files/OpenSSL-Win64/bin/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/Program Files/PuTTY/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
+      - "C:/WinAVR-20100110/bin/lld-link.com"
+      - "C:/WinAVR-20100110/bin/lld-link.exe"
+      - "C:/WinAVR-20100110/bin/lld-link"
+      - "C:/WinAVR-20100110/utils/bin/lld-link.com"
+      - "C:/WinAVR-20100110/utils/bin/lld-link.exe"
+      - "C:/WinAVR-20100110/utils/bin/lld-link"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/lld-link"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/lld-link"
+      - "C:/Windows/System32/lld-link.com"
+      - "C:/Windows/System32/lld-link.exe"
+      - "C:/Windows/System32/lld-link"
+      - "C:/Windows/lld-link.com"
+      - "C:/Windows/lld-link.exe"
+      - "C:/Windows/lld-link"
+      - "C:/Windows/System32/wbem/lld-link.com"
+      - "C:/Windows/System32/wbem/lld-link.exe"
+      - "C:/Windows/System32/wbem/lld-link"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/lld-link"
+      - "C:/Windows/System32/OpenSSH/lld-link.com"
+      - "C:/Windows/System32/OpenSSH/lld-link.exe"
+      - "C:/Windows/System32/OpenSSH/lld-link"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/lld-link.com"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/lld-link.exe"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/lld-link"
+      - "C:/Program Files/Polyspace/R2021a/bin/lld-link.com"
+      - "C:/Program Files/Polyspace/R2021a/bin/lld-link.exe"
+      - "C:/Program Files/Polyspace/R2021a/bin/lld-link"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/lld-link.com"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/lld-link.exe"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/lld-link"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/lld-link.com"
+    found: "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/lld-link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WinAVR-20100110\\bin"
+        - "C:\\WinAVR-20100110\\utils\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Polyspace\\R2021a\\runtime\\win64"
+        - "C:\\Program Files\\Polyspace\\R2021a\\bin"
+        - "C:\\Program Files\\Polyspace\\R2021a\\polyspace\\bin"
+        - "C:\\Program Files\\toolchain\\64-bit operating system\\mingw64\\bin"
+        - "C:\\Users\\hp\\Downloads\\winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2\\mingw64\\bin"
+        - "C:\\ARM_TOOLCHAIN\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility"
+        - "C:\\Program Files\\OpenSSL-Win64\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\Program Files\\PuTTY\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\learn-in-depth\\learn-in-depth_AutosarConfigurator_setup"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "link"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/WinAVR-20100110/bin/"
+      - "C:/WinAVR-20100110/utils/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/"
+      - "C:/Program Files/Polyspace/R2021a/bin/"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/"
+      - "C:/ARM_TOOLCHAIN/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/"
+      - "C:/Program Files/OpenSSL-Win64/bin/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/Program Files/PuTTY/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/link.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WinAVR-20100110\\bin"
+        - "C:\\WinAVR-20100110\\utils\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Polyspace\\R2021a\\runtime\\win64"
+        - "C:\\Program Files\\Polyspace\\R2021a\\bin"
+        - "C:\\Program Files\\Polyspace\\R2021a\\polyspace\\bin"
+        - "C:\\Program Files\\toolchain\\64-bit operating system\\mingw64\\bin"
+        - "C:\\Users\\hp\\Downloads\\winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2\\mingw64\\bin"
+        - "C:\\ARM_TOOLCHAIN\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility"
+        - "C:\\Program Files\\OpenSSL-Win64\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\Program Files\\PuTTY\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\learn-in-depth\\learn-in-depth_AutosarConfigurator_setup"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_MT"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "mt"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/WinAVR-20100110/bin/"
+      - "C:/WinAVR-20100110/utils/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/"
+      - "C:/Program Files/Polyspace/R2021a/bin/"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/"
+      - "C:/ARM_TOOLCHAIN/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/"
+      - "C:/Program Files/OpenSSL-Win64/bin/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/Program Files/PuTTY/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/mt.com"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/mt.exe"
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/mt"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt"
+      - "C:/WinAVR-20100110/bin/mt.com"
+      - "C:/WinAVR-20100110/bin/mt.exe"
+      - "C:/WinAVR-20100110/bin/mt"
+      - "C:/WinAVR-20100110/utils/bin/mt.com"
+      - "C:/WinAVR-20100110/utils/bin/mt.exe"
+      - "C:/WinAVR-20100110/utils/bin/mt"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/mt"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/mt"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/mt"
+      - "C:/Windows/System32/mt.com"
+      - "C:/Windows/System32/mt.exe"
+      - "C:/Windows/System32/mt"
+      - "C:/Windows/mt.com"
+      - "C:/Windows/mt.exe"
+      - "C:/Windows/mt"
+      - "C:/Windows/System32/wbem/mt.com"
+      - "C:/Windows/System32/wbem/mt.exe"
+      - "C:/Windows/System32/wbem/mt"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/mt"
+      - "C:/Windows/System32/OpenSSH/mt.com"
+      - "C:/Windows/System32/OpenSSH/mt.exe"
+      - "C:/Windows/System32/OpenSSH/mt"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/mt.com"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/mt.exe"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/mt"
+      - "C:/Program Files/Polyspace/R2021a/bin/mt.com"
+      - "C:/Program Files/Polyspace/R2021a/bin/mt.exe"
+      - "C:/Program Files/Polyspace/R2021a/bin/mt"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/mt.com"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/mt.exe"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/mt"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/mt.com"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/mt.exe"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/mt"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/mt.com"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/mt.exe"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/mt"
+      - "C:/ARM_TOOLCHAIN/bin/mt.com"
+      - "C:/ARM_TOOLCHAIN/bin/mt.exe"
+      - "C:/ARM_TOOLCHAIN/bin/mt"
+      - "C:/Program Files/dotnet/mt.com"
+      - "C:/Program Files/dotnet/mt.exe"
+      - "C:/Program Files/dotnet/mt"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/mt.com"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/mt.exe"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/mt"
+      - "C:/Program Files/OpenSSL-Win64/bin/mt.com"
+      - "C:/Program Files/OpenSSL-Win64/bin/mt.exe"
+      - "C:/Program Files/OpenSSL-Win64/bin/mt"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/mt.com"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/mt.exe"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/mt"
+      - "C:/Program Files/PuTTY/mt.com"
+      - "C:/Program Files/PuTTY/mt.exe"
+      - "C:/Program Files/PuTTY/mt"
+      - "C:/Program Files/Git/cmd/mt.com"
+      - "C:/Program Files/Git/cmd/mt.exe"
+      - "C:/Program Files/Git/cmd/mt"
+      - "C:/Program Files/CMake/bin/mt.com"
+      - "C:/Program Files/CMake/bin/mt.exe"
+      - "C:/Program Files/CMake/bin/mt"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/mt.com"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/mt.exe"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/mt"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/mt.com"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/mt.exe"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/mt"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/mt.com"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/mt.exe"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/mt"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WinAVR-20100110\\bin"
+        - "C:\\WinAVR-20100110\\utils\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Polyspace\\R2021a\\runtime\\win64"
+        - "C:\\Program Files\\Polyspace\\R2021a\\bin"
+        - "C:\\Program Files\\Polyspace\\R2021a\\polyspace\\bin"
+        - "C:\\Program Files\\toolchain\\64-bit operating system\\mingw64\\bin"
+        - "C:\\Users\\hp\\Downloads\\winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2\\mingw64\\bin"
+        - "C:\\ARM_TOOLCHAIN\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility"
+        - "C:\\Program Files\\OpenSSL-Win64\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\Program Files\\PuTTY\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\learn-in-depth\\learn-in-depth_AutosarConfigurator_setup"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:238 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "lib"
+    candidate_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/WinAVR-20100110/bin/"
+      - "C:/WinAVR-20100110/utils/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/"
+      - "C:/Program Files/Polyspace/R2021a/bin/"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/"
+      - "C:/ARM_TOOLCHAIN/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/"
+      - "C:/Program Files/OpenSSL-Win64/bin/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/Program Files/PuTTY/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/"
+    searched_directories:
+      - "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lib.com"
+    found: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/lib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WinAVR-20100110\\bin"
+        - "C:\\WinAVR-20100110\\utils\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Polyspace\\R2021a\\runtime\\win64"
+        - "C:\\Program Files\\Polyspace\\R2021a\\bin"
+        - "C:\\Program Files\\Polyspace\\R2021a\\polyspace\\bin"
+        - "C:\\Program Files\\toolchain\\64-bit operating system\\mingw64\\bin"
+        - "C:\\Users\\hp\\Downloads\\winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2\\mingw64\\bin"
+        - "C:\\ARM_TOOLCHAIN\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility"
+        - "C:\\Program Files\\OpenSSL-Win64\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\Program Files\\PuTTY\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\learn-in-depth\\learn-in-depth_AutosarConfigurator_setup"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:462 (find_file)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:500 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/"
+    found: "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WinAVR-20100110\\bin"
+        - "C:\\WinAVR-20100110\\utils\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Polyspace\\R2021a\\runtime\\win64"
+        - "C:\\Program Files\\Polyspace\\R2021a\\bin"
+        - "C:\\Program Files\\Polyspace\\R2021a\\polyspace\\bin"
+        - "C:\\Program Files\\toolchain\\64-bit operating system\\mingw64\\bin"
+        - "C:\\Users\\hp\\Downloads\\winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2\\mingw64\\bin"
+        - "C:\\ARM_TOOLCHAIN\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility"
+        - "C:\\Program Files\\OpenSSL-Win64\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\Program Files\\PuTTY\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\learn-in-depth\\learn-in-depth_AutosarConfigurator_setup"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler:  
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+      Copyright (C) Microsoft Corporation. All rights reserved.
+      
+      Build started 8/3/2025 9:09:23 AM.
+      Project "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
+      PrepareForBuild:
+        Creating directory "Debug\\".
+        Creating directory "Debug\\CompilerIdCXX.tlog\\".
+      InitializeBuildStatus:
+        Creating "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+      ClCompile:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /nologo /W0 /WX- /diagnostics:column /Od /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\\\" /Fd"Debug\\vc142.pdb" /external:W0 /Gd /TP /FC /errorReport:queue CMakeCXXCompilerId.cpp
+        CMakeCXXCompilerId.cpp
+      Link:
+        C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
+        CompilerIdCXX.vcxproj -> D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.exe
+      PostBuildEvent:
+        for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+        :VCEnd
+        CMAKE_CXX_COMPILER=C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\Hostx64\\x64\\cl.exe
+      FinalizeBuildStatus:
+        Deleting file "Debug\\CompilerIdCXX.tlog\\unsuccessfulbuild".
+        Touching "Debug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate".
+      Done Building Project "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\4.1.0-rc4\\CompilerIdCXX\\CompilerIdCXX.vcxproj" (default targets).
+      
+      Build succeeded.
+          0 Warning(s)
+          0 Error(s)
+      
+      Time Elapsed 00:00:01.00
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+      
+      The CXX compiler identification is MSVC, found in:
+        D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/4.1.0-rc4/CompilerIdCXX/CompilerIdCXX.exe
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineRCCompiler.cmake:40 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:573 (enable_language)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake:546 (__windows_compiler_msvc_enable_rc)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC-C.cmake:5 (__windows_compiler_msvc)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake:48 (include)"
+      - "CMakeLists.txt:4 (project)"
+    mode: "program"
+    variable: "CMAKE_RC_COMPILER"
+    description: "RC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "rc"
+    candidate_directories:
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/WinAVR-20100110/bin/"
+      - "C:/WinAVR-20100110/utils/bin/"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/"
+      - "C:/Program Files/Polyspace/R2021a/bin/"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/"
+      - "C:/ARM_TOOLCHAIN/bin/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/"
+      - "C:/Program Files/OpenSSL-Win64/bin/"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/"
+      - "C:/Program Files/PuTTY/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files (x86)/EventsManager/bin/"
+      - "C:/Program Files (x86)/EventsManager/sbin/"
+      - "C:/Program Files (x86)/EventsManager/"
+    searched_directories:
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc"
+      - "C:/WinAVR-20100110/bin/rc.com"
+      - "C:/WinAVR-20100110/bin/rc.exe"
+      - "C:/WinAVR-20100110/bin/rc"
+      - "C:/WinAVR-20100110/utils/bin/rc.com"
+      - "C:/WinAVR-20100110/utils/bin/rc.exe"
+      - "C:/WinAVR-20100110/utils/bin/rc"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files/Common Files/Oracle/Java/javapath/rc"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/java8path/rc"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc.com"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc.exe"
+      - "C:/Program Files (x86)/Common Files/Oracle/Java/javapath/rc"
+      - "C:/Windows/System32/rc.com"
+      - "C:/Windows/System32/rc.exe"
+      - "C:/Windows/System32/rc"
+      - "C:/Windows/rc.com"
+      - "C:/Windows/rc.exe"
+      - "C:/Windows/rc"
+      - "C:/Windows/System32/wbem/rc.com"
+      - "C:/Windows/System32/wbem/rc.exe"
+      - "C:/Windows/System32/wbem/rc"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/rc"
+      - "C:/Windows/System32/OpenSSH/rc.com"
+      - "C:/Windows/System32/OpenSSH/rc.exe"
+      - "C:/Windows/System32/OpenSSH/rc"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/rc.com"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/rc.exe"
+      - "C:/Program Files/Polyspace/R2021a/runtime/win64/rc"
+      - "C:/Program Files/Polyspace/R2021a/bin/rc.com"
+      - "C:/Program Files/Polyspace/R2021a/bin/rc.exe"
+      - "C:/Program Files/Polyspace/R2021a/bin/rc"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/rc.com"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/rc.exe"
+      - "C:/Program Files/Polyspace/R2021a/polyspace/bin/rc"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/rc.com"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/rc.exe"
+      - "C:/Program Files/toolchain/64-bit operating system/mingw64/bin/rc"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/rc.com"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/rc.exe"
+      - "C:/Users/hp/Downloads/winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2/mingw64/bin/rc"
+      - "C:/ARM_TOOLCHAIN/bin/rc.com"
+      - "C:/ARM_TOOLCHAIN/bin/rc.exe"
+      - "C:/ARM_TOOLCHAIN/bin/rc"
+      - "C:/Program Files/dotnet/rc.com"
+      - "C:/Program Files/dotnet/rc.exe"
+      - "C:/Program Files/dotnet/rc"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/rc.com"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/rc.exe"
+      - "C:/Program Files (x86)/STMicroelectronics/STM32 ST-LINK Utility/ST-LINK Utility/rc"
+      - "C:/Program Files/OpenSSL-Win64/bin/rc.com"
+      - "C:/Program Files/OpenSSL-Win64/bin/rc.exe"
+      - "C:/Program Files/OpenSSL-Win64/bin/rc"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/rc.com"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/rc.exe"
+      - "C:/Program Files/Java/jre1.8.0_451/bin/rc"
+      - "C:/Program Files/PuTTY/rc.com"
+      - "C:/Program Files/PuTTY/rc.exe"
+      - "C:/Program Files/PuTTY/rc"
+      - "C:/Program Files/Git/cmd/rc.com"
+      - "C:/Program Files/Git/cmd/rc.exe"
+      - "C:/Program Files/Git/cmd/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/rc.com"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/rc.exe"
+      - "C:/Program Files (x86)/learn-in-depth/learn-in-depth_AutosarConfigurator_setup/rc"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/rc.com"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/rc.exe"
+      - "C:/Users/hp/AppData/Local/Programs/Microsoft VS Code/bin/rc"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/rc.com"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/rc.exe"
+      - "C:/Users/hp/AppData/Local/Programs/Python/Python313/Scripts/rc"
+      - "C:/Program Files/bin/rc.com"
+      - "C:/Program Files/bin/rc.exe"
+      - "C:/Program Files/bin/rc"
+      - "C:/Program Files/sbin/rc.com"
+      - "C:/Program Files/sbin/rc.exe"
+      - "C:/Program Files/sbin/rc"
+      - "C:/Program Files/rc.com"
+      - "C:/Program Files/rc.exe"
+      - "C:/Program Files/rc"
+      - "C:/Program Files (x86)/bin/rc.com"
+      - "C:/Program Files (x86)/bin/rc.exe"
+      - "C:/Program Files (x86)/bin/rc"
+      - "C:/Program Files (x86)/sbin/rc.com"
+      - "C:/Program Files (x86)/sbin/rc.exe"
+      - "C:/Program Files (x86)/sbin/rc"
+      - "C:/Program Files (x86)/rc.com"
+      - "C:/Program Files (x86)/rc.exe"
+      - "C:/Program Files (x86)/rc"
+      - "C:/Program Files/CMake/bin/rc.com"
+      - "C:/Program Files/CMake/bin/rc.exe"
+      - "C:/Program Files/CMake/bin/rc"
+      - "C:/Program Files/CMake/sbin/rc.com"
+      - "C:/Program Files/CMake/sbin/rc.exe"
+      - "C:/Program Files/CMake/sbin/rc"
+      - "C:/Program Files/CMake/rc.com"
+      - "C:/Program Files/CMake/rc.exe"
+      - "C:/Program Files/CMake/rc"
+      - "C:/Program Files (x86)/EventsManager/bin/rc.com"
+      - "C:/Program Files (x86)/EventsManager/bin/rc.exe"
+      - "C:/Program Files (x86)/EventsManager/bin/rc"
+      - "C:/Program Files (x86)/EventsManager/sbin/rc.com"
+      - "C:/Program Files (x86)/EventsManager/sbin/rc.exe"
+      - "C:/Program Files (x86)/EventsManager/sbin/rc"
+      - "C:/Program Files (x86)/EventsManager/rc.com"
+      - "C:/Program Files (x86)/EventsManager/rc.exe"
+      - "C:/Program Files (x86)/EventsManager/rc"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\WinAVR-20100110\\bin"
+        - "C:\\WinAVR-20100110\\utils\\bin"
+        - "C:\\Program Files\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\java8path"
+        - "C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath"
+        - "C:\\WINDOWS\\system32"
+        - "C:\\WINDOWS"
+        - "C:\\WINDOWS\\System32\\Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\WINDOWS\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\Polyspace\\R2021a\\runtime\\win64"
+        - "C:\\Program Files\\Polyspace\\R2021a\\bin"
+        - "C:\\Program Files\\Polyspace\\R2021a\\polyspace\\bin"
+        - "C:\\Program Files\\toolchain\\64-bit operating system\\mingw64\\bin"
+        - "C:\\Users\\hp\\Downloads\\winlibs-x86_64-posix-seh-gcc-12.2.0-llvm-14.0.6-mingw-w64ucrt-10.0.0-r2\\mingw64\\bin"
+        - "C:\\ARM_TOOLCHAIN\\bin"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files (x86)\\STMicroelectronics\\STM32 ST-LINK Utility\\ST-LINK Utility"
+        - "C:\\Program Files\\OpenSSL-Win64\\bin"
+        - "C:\\Program Files\\Java\\jre1.8.0_451\\bin"
+        - "C:\\Program Files\\PuTTY\\"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files (x86)\\learn-in-depth\\learn-in-depth_AutosarConfigurator_setup"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\hp\\AppData\\Local\\Programs\\Python\\Python313\\Scripts"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/EventsManager"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files (x86)/EventsManager"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-u0nsmz"
+      binary: "D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-u0nsmz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
+      CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-u0nsmz'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_5f504.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 8/3/2025 9:09:24 AM.
+        Project "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u0nsmz\\cmTC_5f504.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_5f504.dir\\Debug\\".
+          Creating directory "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u0nsmz\\Debug\\".
+          Creating directory "cmTC_5f504.dir\\Debug\\cmTC_5f504.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_5f504.dir\\Debug\\cmTC_5f504.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_5f504.dir\\Debug\\\\" /Fd"cmTC_5f504.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30151 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CMakeCCompilerABI.c
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_5f504.dir\\Debug\\\\" /Fd"cmTC_5f504.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u0nsmz\\Debug\\cmTC_5f504.exe" /INCREMENTAL /ILK:"cmTC_5f504.dir\\Debug\\cmTC_5f504.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-u0nsmz/Debug/cmTC_5f504.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-u0nsmz/Debug/cmTC_5f504.lib" /MACHINE:X64  /machine:x64 cmTC_5f504.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_5f504.vcxproj -> D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u0nsmz\\Debug\\cmTC_5f504.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_5f504.dir\\Debug\\cmTC_5f504.tlog\\unsuccessfulbuild".
+          Touching "cmTC_5f504.dir\\Debug\\cmTC_5f504.tlog\\cmTC_5f504.lastbuildstate".
+        Done Building Project "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-u0nsmz\\cmTC_5f504.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.99
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'C': C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.29.30151.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-dq7358"
+      binary: "D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-dq7358"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-dq7358'
+        
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe" cmTC_ec701.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:n
+        Microsoft (R) Build Engine version 16.11.2+f32259642 for .NET Framework
+        Copyright (C) Microsoft Corporation. All rights reserved.
+        
+        Build started 8/3/2025 9:09:25 AM.
+        Project "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq7358\\cmTC_ec701.vcxproj" on node 1 (default targets).
+        PrepareForBuild:
+          Creating directory "cmTC_ec701.dir\\Debug\\".
+          Creating directory "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq7358\\Debug\\".
+          Creating directory "cmTC_ec701.dir\\Debug\\cmTC_ec701.tlog\\".
+        InitializeBuildStatus:
+          Creating "cmTC_ec701.dir\\Debug\\cmTC_ec701.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+        ClCompile:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_ec701.dir\\Debug\\\\" /Fd"cmTC_ec701.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          Microsoft (R) C/C++ Optimizing Compiler Version 19.29.30151 for x64
+          Copyright (C) Microsoft Corporation.  All rights reserved.
+          CMakeCXXCompilerABI.cpp
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_ec701.dir\\Debug\\\\" /Fd"cmTC_ec701.dir\\Debug\\vc142.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+        Link:
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq7358\\Debug\\cmTC_ec701.exe" /INCREMENTAL /ILK:"cmTC_ec701.dir\\Debug\\cmTC_ec701.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-dq7358/Debug/cmTC_ec701.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/Courses/Si-Vision/Embedded SW Internship/Si-Vision-Embedded-SW-Internship/Events Manager Project/Events_Manager_Implementation/build/CMakeFiles/CMakeScratch/TryCompile-dq7358/Debug/cmTC_ec701.lib" /MACHINE:X64  /machine:x64 cmTC_ec701.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_ec701.vcxproj -> D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq7358\\Debug\\cmTC_ec701.exe
+        FinalizeBuildStatus:
+          Deleting file "cmTC_ec701.dir\\Debug\\cmTC_ec701.tlog\\unsuccessfulbuild".
+          Touching "cmTC_ec701.dir\\Debug\\cmTC_ec701.tlog\\cmTC_ec701.lastbuildstate".
+        Done Building Project "D:\\Courses\\Si-Vision\\Embedded SW Internship\\Si-Vision-Embedded-SW-Internship\\Events Manager Project\\Events_Manager_Implementation\\build\\CMakeFiles\\CMakeScratch\\TryCompile-dq7358\\cmTC_ec701.vcxproj" (default targets).
+        
+        Build succeeded.
+            0 Warning(s)
+            0 Error(s)
+        
+        Time Elapsed 00:00:00.74
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|link\\.exe|lld-link(\\.exe)?))("|,| |$)]
+        linker tool for 'CXX': C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeDetermineLinkerId.cmake:36 (message)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/HostX64/x64/link.exe" "-v"
+      Microsoft (R) Incremental Linker Version 14.29.30151.0
+      Copyright (C) Microsoft Corporation.  All rights reserved.
+...
