@@ -77,7 +77,7 @@
 
   - **READELF**:
 
-    - The output of the as command is an ELF relocatable objec file, not an ELF executable file.
+    - The output of the as command is an ELF relocatable object file, not an ELF executable file.
 
     - ELF is an intermediate object file for the linker
 
@@ -349,3 +349,72 @@ OR
 gcc main.c libmathutils.a -o app
 ```
 
+- ## Tool 6: Strip
+
+  - The `strip` command in Linux is used to remove symbols and debugging information from compiled binaries (like `.elf`, `.o`, `.so`, or executables). This reduces file size and improves load times.
+
+  - Syntax
+
+    > strip [options] filename
+
+  - After using strip on an executable elf file, you can't debug it anymore using gdb.
+
+    ![image-20250803153038213](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250803153038213.png)
+
+    ![image-20250803153129316](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250803153129316.png)
+
+  - Since debugging symbols are removed, the size of the elf file after running the `strip` command decreases!
+
+    ![image-20250803153210778](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250803153210778.png)
+
+- ## Tool 7: Strings Command
+
+  - Strings command is used to extract and display printable strings from binary files or other non-text files.
+
+  - It scans a file for sequences of printable ASCII characters (usually 4 or more characters long) and displays them. This is useful for:
+
+    - Inspecting binary executables, libraries, or object files
+    - Extracting error messages, function names, URLs, etc.
+    - Reverse engineering or basic forensics
+
+    ![image-20250803155753640](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250803155753640.png)
+
+    - It gives you visibility into what's inside a binary without needing the source code or debugging it. It can reveal:
+      - Function names
+      - Hardcoded file paths
+      - Compiler info
+      - Static library names
+      - Debug messages
+      - Build toolchains
+
+- ## Tool 8: C++filt
+
+  - It's responsible for demangling the C++ symbols & turns them into readable names.
+
+  - Example:
+
+    ![image-20250803171026656](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250803171026656.png)
+
+​		![image-20250803171101315](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250803171101315.png)
+
+- ## Tool 9: Addr2line
+
+  - It is a command-line tool in Linux that translates addresses (such as memory addresses from a crash or backtrace) into file names and line numbers in the source code — if debugging symbols are available.
+
+  - Syntax:
+
+    ```bash
+    addr2line -e <executable> <address>
+    ```
+
+  - Example: If my program crashed at address 0x4005d6:
+
+    >  Segmentation fault at address 0x4005d6
+
+​		then, we can run:
+
+```bash
+addrline -e a.out 0x4005d6
+```
+
+clib in elf file
