@@ -418,3 +418,21 @@ addrline -e a.out 0x4005d6
 ```
 
 clib in elf file
+
+
+
+fmax(int x, int y) //in picolibc
+
+{
+
+printf("x = %d, y=%d",x,y)
+
+// .......
+
+printf("x = %d, ");	
+
+}
+
+
+
+![image-20250803180707771](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250803180707771.png)
