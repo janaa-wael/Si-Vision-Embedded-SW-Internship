@@ -23,14 +23,14 @@ endian = 'little'
 
 RISCV Compilation Command:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-riscv64-unknown-elf-gcc hello_world.c \
+riscv64-unknown-elf-gcc main.c \
   -g -O0 -fno-builtin -fno-builtin-sinf \
   --sysroot=$HOME/picolibc-install \
   -specs=picolibc.specs \
   -march=rv32imac -mabi=ilp32 \
   --oslib=semihost \
-  -T hello-world.ld \
-  -o hello-world-riscv.elf
+  -T a.ld \
+  -o a.elf
 
 
 QEMU RISCV32 Command:
@@ -40,7 +40,15 @@ qemu-system-riscv32 \
   -semihosting-config enable=on \
   -monitor none -serial mon:stdio \
   -bios none \
-  -kernel hello-world-riscv.elf
+  -kernel a.elf
+
+qemu-system-riscv32 \
+  -machine virt -cpu rv32 -nographic \
+  -semihosting-config enable=on \
+  -monitor none -serial mon:stdio \
+  -bios none \
+  -kernel a.elf \
+  -S -gdb tcp::1234
 
 
 | Question                        | Answer                                                                               |
@@ -50,4 +58,26 @@ qemu-system-riscv32 \
 | Why wasn’t your edit used?      | You didn’t install the new build, so your compiler still used the old library        |
 | How did you fix it?             | You ran `sudo ninja -C build install` to overwrite the system copy with your changes |
 
+Using GDB With QEMU Command:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gdb-multiarch a.elf
 
+
+GDB USeful Commands:
+~~~~~~~~~~~~~~~~~~~~
+1- list <funtion_name> --> prints the body of the function & its signature
+
+
+int
+fclose(FILE *f)
+{
+        struct __file_close *cf = (struct __file_close *) f;
+        if ((f->flags & __SCLOSE) && cf->close) {
+                /*
+                 * File has 'close' function, call it
+                 */
+                return (*cf->close)(f);
+        }
+        return 0;
+}
+   

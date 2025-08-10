@@ -13,7 +13,7 @@ int main()
 /**
   qemu-system-riscv32 \
   -machine virt -cpu rv32 -nographic \
-  -semihosting-config enable=on \
+  -semihosting-config enable=on \O
 
   -monitor none -serial mon:stdio \
   -bios none \
