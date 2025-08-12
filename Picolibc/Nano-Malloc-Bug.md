@@ -30,11 +30,26 @@
     - We call fclose when we're done with a file to avoid resource leaks and ensure that data is actually written.
     - Closing a file automatically flushes any buffers associated with it.
 
-- Test Case: try closing the same file twice on an online compiler.
+- Test Case: try closing the same file twice on:
+
+  - An online compiler.
+
+  ![image-20250805132532863](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250805132532863.png)
+
+- glibc on Linux
+  ![image-20250805134600048](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250805134600048.png)
+
+- Windows Runtime Library
+
+  ![image-20250805134938888](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250805134938888.png)
+
+- Picolibc
+
+  ![image-20250805141138536](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250805141138536.png)
 
 There's an issue in Picolibc where dynamic memory management functions, especially 'nano-malloc and 'nano-free' might overwrite some user data. An example of this is observed in the 'fclose' function in tinystdio. When calling 'fclose' which invokes bufio_close() then free() function with passing the file pointer passed to fclose at the beginning, the memory deallocation may affect the FILE structure.
 
-
+nano-free -> fclose -> bufio_close -> free --> FILE structure is affected
 
 This can result clearing 'unget' variable in case of 32-bit targets or 'unget' and 'flags' variables in case of 64-bit targets.
 

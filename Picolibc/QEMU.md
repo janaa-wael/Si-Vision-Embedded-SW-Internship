@@ -52,3 +52,4 @@ if it calls malloc, change the configuration in the meson build file.
 fclose.c: try to use fclose() for the same file 2 times -> try it on an online compiler then 
 
 check in C99 standard
+
