@@ -1,13 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
+struct employee{
+	char name[20];
+	int age;
+};
 int main()
 {
-	int* ptr = (int*)malloc(4);
-	printf("Successfully allocated 4 bytes in heap\n");
-	*ptr = 23;
+
+	struct employee* ptr = (struct employee*)malloc(sizeof(struct employee));
+	strcpy(ptr->name, "Jana");
+	ptr->age = 23;
+	printf("Name = %s\n",ptr->name);
 	free(ptr);
-	printf("Successfully freed 4 bytes in heap\n");
+	printf("Name = %s\n", ptr->name);
+	printf("Successfully freed struct in heap\n");
 	exit(0);
 	return 0;
 }

@@ -13,14 +13,14 @@ int main(void) {
     ungetc('A', fp);  // Set unget to 'A'
 
     printf("Before fclose: unget=%d\n", fp->unget);
-
+    fflush(NULL);
     // Closing will call fclose() -> bufio_close() -> free(fp)
     fclose(fp);
 
     // Now fp is freed — dereferencing is technically UB,
     // but for testing, we check if 'unget' was overwritten
     printf("After fclose: unget=%d (should still be 'A' if not overwritten)\n", fp->unget);
-
+	exit(0);
     return 0;
 }
 

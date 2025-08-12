@@ -1,0 +1,15 @@
+[binaries]
+c = 'riscv64-unknown-elf-gcc'
+ar = 'riscv64-unknown-elf-ar'
+strip = 'riscv64-unknown-elf-strip'
+
+[properties]
+c_args = ['-march=rv32imaczicsr', '-mabi=ilp32']
+c_link_args = ['-march=rv32imaczicsr', '-mabi=ilp32']
+
+
+[host_machine]
+system = 'none'
+cpu_family = 'riscv32'
+cpu = 'rv32imac'
+endian = 'little'
