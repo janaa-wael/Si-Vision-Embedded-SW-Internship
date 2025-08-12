@@ -1,0 +1,71 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build RISC-V ELF",
+      "type": "shell",
+      "command": "riscv64-unknown-elf-gcc",
+      "args": [
+        "main.c",
+        "-g", "-O0",
+        "-march=rv32imac",
+        "-mabi=ilp32",
+        "-specs=picolibc.specs",
+        "--oslib=semihost",
+        "-T", "a.ld",
+        "-o", "a.elf"
+      ],
+      "problemMatcher": ["$gcc"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run QEMU RISC-V",
+      "type": "shell",
+      "command": "qemu-system-riscv32",
+      "args": [
+        "-machine", "virt,accel=tcg",
+        "-cpu", "rv32",
+        "-nographic",
+        "-semihosting-config", "enable=on",
+        "-monitor", "none",
+        "-serial", "mon:stdio",
+        "-bios", "none",
+        "-kernel", "a.elf"
+      ],
+      "problemMatcher": [],
+      "dependsOn": ["Build RISC-V ELF"]
+    },
+    {
+      "label": "Build and Run QEMU",
+      "dependsOn": [
+        "Build RISC-V ELF",
+        "Run QEMU RISC-V"
+      ]
+    },
+    {
+      
+  "label": "Run QEMU RISC-V",
+  "type": "shell",
+  "command": "qemu-system-riscv32",
+  "args": [
+    "-machine", "virt",
+    "-cpu", "rv32",
+    "-nographic",
+    "-semihosting-config", "enable=on",
+    "-monitor", "none",
+    "-serial", "mon:stdio",
+    "-bios", "none",
+    "-s",                       // Starts gdbserver on port 1234
+    "-S",                       // Pause CPU at startup (until gdb connects)
+    "-kernel", "a.elf"
+  ],
+  "isBackground": true,
+  "problemMatcher": []
+}
+
+    
+  ]
+}

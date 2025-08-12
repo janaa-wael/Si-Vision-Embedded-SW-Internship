@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      // 1) Compile your RISC-V ELF
+      "label": "Build RISC-V ELF",
+      "type": "shell",
+      "command": "riscv64-unknown-elf-gcc",
+      "args": [
+        "main.c",                // source file(s)
+        "-g",                    // debug info
+        "-O0",                   // no optimization
+        "-march=rv32imac",       // match your QEMU CPU
+        "-mabi=ilp32",
+        "-o", "a.elf"            // output ELF
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      // 2) Run QEMU and wait before GDB connects
+      "label": "Run QEMU RISC-V",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "qemu-system-riscv32 -machine sifive_e -nographic -kernel ${workspaceFolder}/a.elf -S -gdb tcp::1250 & sleep 1"
+      ],
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}
