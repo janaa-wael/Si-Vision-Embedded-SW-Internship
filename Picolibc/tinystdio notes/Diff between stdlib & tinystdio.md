@@ -20,3 +20,5 @@
   - It's focused on **ROM size**, not necessarily speed or full POSIX compatibility.
   - Doesn’t support every advanced feature (e.g., locale, wide chars, complex format specifiers).
   - Often combined with **`minimal-printf`**-style features for microcontrollers.
+
+![image-20250812162944913](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250812162944913.png)
