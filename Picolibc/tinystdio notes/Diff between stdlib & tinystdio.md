@@ -1,24 +1,68 @@
-# Difference between stdio and tinystdio in Picolibc
+# Difference Between `stdio` and `tinystdio` in Picolibc
 
-- ## `stdio` in picolibc
+## `stdio` in Picolibc
 
-  - Picolibc is designed for **small embedded systems**, so its `stdio` implementation:
-    1. **Is smaller and more configurable** than glibc’s `stdio`.
-    2. Can be built in different modes:
-       - **Full stdio** → more complete functionality (wide I/O, formatting, floating-point printing if enabled, etc.).
-       - **tinystdio** → a reduced-size version with simpler code and smaller RAM/flash footprint.
+- Picolibc is tailored for **small embedded systems**, so its `stdio` is much lighter than glibc’s.
+- Key characteristics:
+  1. **Compact and configurable** compared to glibc/newlib.
+  2. Can be built in multiple modes:
+     - **Full `stdio`** → provides broader functionality (wide I/O, formatting, floating-point support if enabled, etc.).
+     - **`tinystdio`** → a reduced-size variant optimized for flash and RAM savings.
 
-- `tinystdio` in picolibc
+------
 
-  - `tinystdio` is the small-footprint implementation of the C standard I/O library (`stdio.h`) — basically, a minimal version of `printf`, `scanf`, `fopen`, etc., optimized for embedded systems with very limited flash and RAM.
-  - Why does it exist?
-    - Full-featured `stdio` from glibc/newlib is large (tens of KB of code).
-    - Many embedded projects only need basic formatted output/input.
-    - `tinystdio` implements just enough of `stdio` for most small programs, cutting size drastically.
-  - It's part of picolibc, you can choose it at build/configure time.
-  - It replaces the normal stdio functions (`printf`, `puts`, etc.) with smaller, simpler ones.
-  - It's focused on **ROM size**, not necessarily speed or full POSIX compatibility.
-  - Doesn’t support every advanced feature (e.g., locale, wide chars, complex format specifiers).
-  - Often combined with **`minimal-printf`**-style features for microcontrollers.
+## `tinystdio` in Picolibc
 
-![image-20250812162944913](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250812162944913.png)
+- A **minimal implementation** of the C standard I/O library (`stdio.h`).
+- Provides only essential features (`printf`, `scanf`, `fopen`, etc.) with much simpler and smaller code.
+
+### Why `tinystdio` Exists
+
+- Full `stdio` (from glibc/newlib) can take tens of KB of code space.
+- Many embedded applications only require **basic text I/O**.
+- `tinystdio` cuts down size dramatically while covering the majority of use cases.
+
+### Features & Trade-offs
+
+- Replaces the standard I/O functions (`printf`, `puts`, etc.) with **smaller, simpler versions**.
+- Prioritizes **ROM/RAM savings** over:
+  - Execution speed
+  - POSIX completeness
+  - Advanced functionality (locales, wide characters, complex format specifiers).
+- Often paired with **`minimal-printf`**-style functionality on microcontrollers.
+- Configurable at build time as part of Picolibc.
+
+------
+
+👉 In short:
+
+- **`stdio` (full mode)** = More complete, closer to standard C/POSIX, heavier.
+- **`tinystdio`** = Lean, embedded-oriented, with essential functionality only.
+
+Speed Test Case:
+
+![image-20250824050058022](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250824050058022.png)
+
+Size Test Case:
+![image-20250824050158843](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250824050158843.png)
+
+### Size of text section when using stdio vs tinystdio
+
+- `stdio`:![image-20250819120112423](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250819120112423.png)
+
+- `tinystdio`:![image-20250819122040745](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250819122040745.png)
+
+**Stdio:**
+
+![image-20250819164806361](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250819164806361.png)
+
+![image-20250819183718936](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250819183718936.png)
+
+**Tinystdio:**
+
+![image-20250819165827608](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250819165827608.png)
+
+![image-20250819174358693](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250819174358693.png)
+
+![image-20250819182620828](C:\Users\hp\AppData\Roaming\Typora\typora-user-images\image-20250819182620828.png)
+
