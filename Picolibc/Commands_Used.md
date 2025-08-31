@@ -1,11 +1,11 @@
 Meson Build Command:
 ~~~~~~~~~~~~~~~~~~~~
-meson setup ../../picolibc-build \
+meson setup picolibc-build \
   --cross-file=riscv32-cross.txt \
   --prefix=$HOME/picolibc-install
 
-ninja -C ../../picolibc-build
-ninja -C ../../picolibc-build install
+ninja -C picolibc-build
+ninja -C picolibc-build install
 
 Cross-file Contents:
 ~~~~~~~~~~~~~~~~~~~~
@@ -21,7 +21,7 @@ cpu = 'rv32imac'
 endian = 'little'
 
 
-RISCV Compilation Command:
+RISCV32 Compilation Command:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 riscv64-unknown-elf-gcc main.c \
   -g -O0 -fno-builtin -fno-builtin-sinf \
@@ -30,6 +30,16 @@ riscv64-unknown-elf-gcc main.c \
   -march=rv32imac -mabi=ilp32 \
   --oslib=semihost \
   -T a.ld \
+  -o a.elf
+
+RISCV64 Compilation Command:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+riscv64-unknown-elf-gcc fclose_twice_Linux.c \
+  -g -O0 \
+  --sysroot=$HOME/picolibc-rv64-install \
+  -specs=picolibc.specs \
+  -march=rv64imac_zicsr -mabi=lp64 \
+  -Wl,--start-group -lc -lgcc -lsemihost -Wl,--end-group \
   -o a.elf
 
 
@@ -80,4 +90,34 @@ fclose(FILE *f)
         }
         return 0;
 }
+
+---------------------------------
+Command to use stdio instead of tinystdio:
+
+cd ~/Desktop/picolibc
+rm -rf build-rv32-stdio
+meson setup build-rv32-stdio \
+  --cross-file=cross-riscv32.txt \
+  --prefix=$HOME/picolibc-stdio-install \
+  -Dmultilib=false \
+  -Dtinystdio=false \
+  -Dsemihost=true
+----------------------------------
+Aarch64 Architecture:
+~~~~~~~~~~~~~~~~~~~~~
+1- Compilation Command:
+ aarch64-linux-gnu-gcc test.c   -specs=picolibc.specs   --oslib=semihost   -Taarch64.ld   --sysroot=$HOME/picolibc-install-aarch64   -g -O0   -o test.elf
+
+
+2- QEMU Command:
+qemu-system-aarch64 \
+  -semihosting-config enable=on \
+  -monitor none \
+  -serial none \
+  -nographic \
+  -machine virt -cpu cortex-a57 \
+  -kernel test.elf \
+  -S -gdb tcp::1234
+
+
    
